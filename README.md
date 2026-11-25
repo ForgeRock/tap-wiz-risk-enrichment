@@ -21,14 +21,6 @@ Use this node to:
 | Neither | `none` |
 | Error at any point | `unknown` (written on the error path — see error handling) |
 
-## Compatibility
-
-| Product | Versions |
-|---|---|
-| PingAM | 8.0.2 and later |
-| PingOne Advanced Identity Cloud | All current tenants |
-
-Built against the PingAM 8.0.2 node SDK (Java 17 bytecode).
 
 ## Outcomes
 
@@ -41,8 +33,8 @@ Built against the PingAM 8.0.2 node SDK (Java 17 bytecode).
 
 | Option | Type | Required | Default | Description |
 |---|---|---|---|---|
-| Auth URL | String | No | `https://auth.app.wiz.io/oauth/token` | Wiz OAuth 2.0 token endpoint. |
-| API URL | String | Yes | `https://api.us17.app.wiz.io/graphql` | Tenant-specific Wiz GraphQL endpoint (varies by tenant region — copy from your Wiz tenant settings). |
+| Auth URL | String | No | `` | Wiz OAuth 2.0 token endpoint. |
+| API URL | String | Yes | `` | Tenant-specific Wiz GraphQL endpoint (varies by tenant region — copy from your Wiz tenant settings). |
 | Client ID | String | Yes | *(empty)* | Wiz service-account client ID. |
 | Client Secret | String | Yes | *(empty)* | Wiz service-account client secret. |
 
@@ -99,19 +91,10 @@ This node requires a Wiz service account with API access and the `read:issues` s
 ## Installation
 
 1. Obtain the node jar (`wiz-gti-marketplace-nodes-<version>.jar` — this jar also contains the companion nodes; see Related nodes).
-2. Copy it into `webapps/openam/WEB-INF/lib/` (PingAM) or deploy per your PingAIC packaging process.
+2. Copy it into `webapps/openam/WEB-INF/lib/` (PingAM).
 3. Restart the AM web application container.
 4. The node appears in the journey designer as **Wiz issues enrichment for the authenticated user**.
 
-## Building from source
-
-Requirements: JDK 17+, Maven 3.8+, and Ping Identity repository credentials (Backstage subscription) configured in `~/.m2/settings.xml` for `https://maven.forgerock.org/artifactory/private-releases`.
-
-```bash
-mvn clean package
-```
-
-The jar is produced in `target/`.
 
 ## Related nodes
 
