@@ -1,6 +1,6 @@
 # Wiz Risk Enrichment Node
 
-A custom authentication node for PingAM and PingOne Advanced Identity Cloud (PingAIC) that enriches the authentication session with the user's Wiz risk profile — counting their open critical and high-severity issues and writing the resulting risk tier to shared state for downstream nodes and claims.
+A custom authentication node for PingAM that enriches the authentication session with the user's Wiz risk profile — counting their open critical and high-severity issues and writing the resulting risk tier to shared state for downstream nodes and claims.
 
 ## Overview
 
